@@ -7,6 +7,8 @@ const body = document.querySelector('body')
 button.addEventListener("click", () =>  {
   
   const randomNumber = generateRandomNumber()
+
+  //conditional logic to avoid changing to the same color due to randomly generating the same number
   if (colorArray[randomNumber] === body.style.backgroundColor){
     body.style.backgroundColor = colorArray[randomNumber + 1]
     color.textContent = colorArray[randomNumber + 1]
